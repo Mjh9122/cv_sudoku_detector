@@ -1,3 +1,4 @@
 sudoku_pics/*
 sudoku_vids/*
 solver_benchmark/sudoku.csv
+__pycache__/
