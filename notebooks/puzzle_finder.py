@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from model import Net
+from notebooks.model import Net
 import imutils
 import torch 
 
