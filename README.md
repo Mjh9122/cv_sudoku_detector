@@ -16,7 +16,7 @@ Threshold image to accentuate edges and remove noise
 <p align="center">
   <img src="https://github.com/Mjh9122/sudoku/blob/main/figures/binary.png" width="300">  
 </p>
-Find puzzle by looking for the largest countour present in the frame   
+Find puzzle by looking for the largest contour present in the frame   
 <p align="center">
   <img src="https://github.com/Mjh9122/sudoku/blob/main/figures/puzzle.png" width="300">  
 </p>
@@ -34,7 +34,7 @@ Warp puzzle to correct for perspective
    2. The CNN was trained ![here](https://github.com/Mjh9122/sudoku/blob/main/notebooks/TMNIST_trainer.ipynb) and achieved 98% accuracy on a validation set.
 #### Solve
 7. Once the board is filled out, I apply ![my solver](https://github.com/Mjh9122/sudoku/blob/main/notebooks/solver.py)
-   1. The solver works on a combination of constraint propogation and backtracking, guessing the cells with the smallest number of valid inputs at each step.
+   1. The solver works on a combination of constraint propagation and backtracking, guessing the cells with the smallest number of valid inputs at each step.
    2. The solver was ![benchmarked](https://github.com/Mjh9122/sudoku/blob/main/solver_benchmark/benchmark_solver.ipynb) on 10,000 puzzles and averaged 42 guesses per solve.
 
 ### Results
@@ -49,17 +49,17 @@ The blanks were classified correctly 99.56 percent of the time, vindicating the 
 This histogram shows the accuracy of cell filling across each frame of the video. Blue represents all cells, while orange is only cells with numbers in the ground truth. 
 
 #### Board accuracy 
-The correct board was detected 124 times, 33.60 percent of the total frames. While this number is disapointing on its lonesome, the noisy data insures that each type of mistake is not often repeated. This leaded to the correct board taking a commanding plurality amongst many errors that only appear once or twice. 
+The correct board was detected 124 times, 33.60 percent of the total frames. While this number is disappointing on its lonesome, the noisy data insures that each type of mistake is not often repeated. This leaded to the correct board taking a commanding plurality amongst many errors that only appear once or twice. 
 
 <p align="center">
   <img src="https://github.com/Mjh9122/sudoku/blob/main/figures/board_freq.png" width="500">  
 </p>
 
-This histogram shows the frequency of each board detected across all frames. The correct board shows up 4x as often as the nearest erronious board (124 vs. 31 times). 
+This histogram shows the frequency of each board detected across all frames. The correct board shows up 4x as often as the nearest erroneous board (124 vs. 31 times). 
 
 
 #### Solution accuracy 
-The lack of repeated errors helps even more when looking only at valid solutions. Each mistake has the chance of making its board unsolvable, while the correct board while always give the same solution. This means that all 124 correct detections remain, while the number of erronious boards falls from 245 to 62. 2/3 of our valid solutions are correct and the correct solution apeares 10x as much as the most popular incorrect solution. 
+The lack of repeated errors helps even more when looking only at valid solutions. Each mistake has the chance of making its board unsolvable, while the correct board while always give the same solution. This means that all 124 correct detections remain, while the number of erroneous boards falls from 245 to 62. 2/3 of our valid solutions are correct and the correct solution appears 10x as much as the most popular incorrect solution. 
 
 <p align="center">
   <img src="https://github.com/Mjh9122/sudoku/blob/main/figures/solution_freq.png" width="500">  
